@@ -76,7 +76,9 @@ library
     , cryptonite
     , data-default
     , data-default-class
+    , direct-sqlite
     , directory
+    , esqueleto
     , exceptions
     , filepath
     , foldl
@@ -89,10 +91,14 @@ library
     , ixset-typed
     , lens
     , memory
+    , monad-logger
     , mtl
     , mwc-random
     , neat-interpolation
     , optparse-applicative
+    , persistent
+    , persistent-sqlite
+    , persistent-template
     , QuickCheck
     , reflection
     , resourcet
@@ -207,6 +213,9 @@ library
       Cardano.Wallet.Kernel.DB.Spec.Read
       Cardano.Wallet.Kernel.DB.Spec.Update
       Cardano.Wallet.Kernel.DB.Sqlite
+      Cardano.Wallet.Kernel.DB.Sqlite.Beam
+      Cardano.Wallet.Kernel.DB.Sqlite.Persistent
+      Cardano.Wallet.Kernel.DB.Sqlite.Persistent.Orphans
       Cardano.Wallet.Kernel.DB.TxMeta
       Cardano.Wallet.Kernel.DB.TxMeta.Types
       Cardano.Wallet.Kernel.DB.Updates
@@ -419,6 +428,7 @@ test-suite unit
     , universum
     , unordered-containers
     , vector
+
 
   type:
      exitcode-stdio-1.0
